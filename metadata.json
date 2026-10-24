@@ -1,0 +1,6 @@
+{
+  "name": "+150 Receitas de Batidas na Garrafa",
+  "description": "+150 Receitas de Batidas na Garrafa para faturar até R$3.000 por mês mesmo começando do zero.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

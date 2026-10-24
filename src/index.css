@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --pink: #FF477E;
+  --pink-light: #FF7096;
+  --pink-pale: #FFF0F3;
+  --rose: #FFB3C6;
+  --green: #1DAE6D;
+  --green-dark: #158A55;
+  --orange: #FF7A00;
+  --purple: #7B2FBE;
+  --dark: #1A0008;
+  --text: #2D0011;
+  --muted: #6B1A34;
+  --white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes popup-in {
+  from {
+    transform: scale(0.85) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-scroll-left {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-right {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: scroll-right 34s linear infinite;
+}
+
+.animate-scroll-left:hover,
+.animate-scroll-right:hover {
+  animation-play-state: paused;
+}
+
+.animate-popup {
+  animation: popup-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.05);
+}
+
+.cta-main {
+  background: var(--pink);
+  color: #fff;
+  box-shadow: 0 6px 28px rgba(255, 71, 126, 0.45);
+}
+
+.cta-green {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 6px 28px rgba(29, 174, 109, 0.35);
+}
+
+.cta-pink {
+  background: var(--pink);
+  color: #fff;
+  box-shadow: 0 6px 28px rgba(255, 71, 126, 0.45);
+}
+
+.cta-orange {
+  background: #FF7A00;
+  color: #fff;
+  box-shadow: 0 6px 28px rgba(255, 122, 0, 0.35);
+}
